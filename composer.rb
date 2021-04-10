@@ -278,6 +278,7 @@ gem_group :development do
   gem 'annotate'
   gem 'amazing_print'
   gem 'rails_apps_testing'
+  gem 'pry-byebug'
 end
 gem_group :development, :test do
   gem 'rspec-rails'
