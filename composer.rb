@@ -101,6 +101,8 @@ after_bundle do
   say 'Applying webpacker dev config...'
   inject_into_file 'config/webpack/development.js', after: "const environment = require('./environment')\n" do
     <<~EOF
+      const chokidar = require('chokidar')
+      
       environment.config.devServer.before = (app, server) => {
         chokidar.watch([
           'config/locales/*.yml',
