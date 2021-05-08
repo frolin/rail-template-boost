@@ -241,17 +241,17 @@ end
 say 'Applying kaminari & rails-i18n...'
 gem 'kaminari', '~> 1.1.1'
 gem 'rails-i18n', '~> 6.0.0'
-after_bundle do
-  generate 'kaminari:config'
-  generate 'kaminari:views', 'bootstrap4'
-end
+# after_bundle do
+#  generate 'kaminari:config'
+#  generate 'kaminari:views', 'bootstrap4'
+#end
 
-say 'Applying mina & its plugins...'
-gem 'mina', '~> 1.2.2', require: false
-gem 'mina-ng-puma', '>= 1.4.0', require: false
-gem 'mina-multistage', require: false
-gem 'mina-sidekiq', require: false
-gem 'mina-logs', require: false
+#say 'Applying mina & its plugins...'
+#gem 'mina', '~> 1.2.2', require: false
+#gem 'mina-ng-puma', '>= 1.4.0', require: false
+#gem 'mina-multistage', require: false
+#gem 'mina-sidekiq', require: false
+#gem 'mina-logs', require: false
 get_remote('config/deploy.rb')
 get_remote('config/puma.rb')
 get_remote('config/deploy/production.rb')
